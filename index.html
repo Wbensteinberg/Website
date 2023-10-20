@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will Steinberg Portfolio</title>
+    <link rel="stylesheet" href="styleforWS.css">
+</head>
+<body>
+<div class="Bio">
+    <div class="Bio-inner">
+        <img src="linked.jpg" width="250px" height="333px">
+    </div>
+    <p class="desc">Hey! I'm Will Steinberg, a 19 year old tennis player and Computer Science enthusiast from Santa Barbara.
+        I'm a second year Computer Science major at UCLA and I'm very passionate about object-oriented
+        game development and web design. Outside of school, I play tennis at least two hours a day and 
+        build websites for fun.</p>
+</div>
+
+<div class="Links">
+    <a href="https://www.linkedin.com/in/will-steinberg-5a253a262/" target="_blank">
+        <strong>Linkedin</strong></a> 
+    <a href="will_steinberg3.pdf" target="_blank" download="Resume">
+        <button><strong>Resume</strong></button></a>
+</div>
+
+
+
+<p style ="font-size: 38px; color: whitesmoke; text-align: center; opacity: .75;">Projects</p>
+
+<!-- Project container that displays all project boxes-->
+<div class="Project-container">
+    <div class="Project-box-PNetFlix" onclick="showSummary('PNetFlix')">
+        <!-- <img src="PNetFlix.png" alt="PNetFlix Project"> -->
+        <p>PNetFlix</p>
+    </div>
+    <div class="Project-box-PeachParty" onclick="showSummary('PeachParty')">
+        <p>PeachParty</p>
+    </div>
+</div>
+
+<!-- Summaries of Projects-->
+<div id="PNetFlix-summary" class="Project-summary">
+    <span class="close-btn" onclick="closeSummary('PNetFlix')">&times;</span>
+    <!-- <span class="close-btn" onclick="closeSummary('PNetFlix')">&times;</span> -->
+    <img src="Pss1.png" width="320px" height="200px">
+    <p>I built a treemultimap from scratch and used it to connect Netflix users to their 
+        previously watched movies, genres, directors and actors. I then used this data to recommend 
+        5 new movies to each user selected from a database of over 40,000 movies.</p>
+    
+    <!-- Add more details and images as needed -->
+</div>
+
+
+
+
+<!-- Java Script Code for making the summary pop up-->
+<script>
+    function showSummary(projectId) {
+        var summary = document.getElementById(projectId + '-summary');
+        if (summary) {
+            summary.style.display = 'block';
+        }
+    }
+
+    function closeSummary(projectId) {
+        var summary = document.getElementById(projectId + '-summary');
+        if (summary) {
+            summary.style.display = 'none';
+        }
+    }
+</script>
+
+
+</body>
+</html>
